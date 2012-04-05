@@ -28,7 +28,11 @@
         return b.time - a.time;
       });
       ranking.forEach(function (test) {
-        console.log(test.name, test.time + "ms");
+        console.log(
+          test.name,
+          test.time + "ms",
+          "(" + Math.floor(test.time / info.runtime * 1000) / 10 + "%)"
+        );
       });
     })();
     console.groupEnd();
